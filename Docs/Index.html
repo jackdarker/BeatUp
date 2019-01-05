@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.0  (Win32)">
+	<META NAME="AUTHOR" CONTENT="jk jk">
+	<META NAME="CREATED" CONTENT="20181223;20182989">
+	<META NAME="CHANGEDBY" CONTENT="jk jk">
+	<META NAME="CHANGED" CONTENT="20181229;9535691">
+	<META NAME="CHANGEDBY" CONTENT="jk jk">
+	<META NAME="CHANGEDBY" CONTENT="jk jk">
+	<META NAME="CHANGEDBY" CONTENT="jk jk">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		H1 { margin-bottom: 0.21cm }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "Microsoft YaHei"; font-size: 16pt }
+		H1.ctl { font-family: "Arial"; font-size: 16pt }
+		H2 { margin-bottom: 0.21cm }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: normal }
+		H2.cjk { font-family: "Microsoft YaHei"; font-size: 14pt; font-style: italic }
+		H2.ctl { font-family: "Arial"; font-size: 14pt; font-style: italic }
+		H3.western { font-family: "Arial", sans-serif }
+		H3.cjk { font-family: "HG Mincho Light J" }
+		H3.ctl { font-family: "Arial Unicode MS" }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1 CLASS="western">BeatUp &ndash; Beat'm Up Game Template</H1>
+<P><BR><BR>
+</P>
+<H2 CLASS="western">Design-Considerations</H2>
+<UL>
+	<LI><P>use only 4 direction-keys and A,B,X,Y to be able to play with
+	joystick or keyboard</P>
+	<LI><P></P>
+</UL>
+<H2 CLASS="western">Combat-Mechanics</H2>
+<UL>
+	<LI><P>A and X are used for attack moves while B and Y are used for
+	blocks</P>
+	<LI><P>The pawn has a lower and upper body damage zone. The back
+	side is even more sensitive to damage</P>
+</UL>
+<H3 CLASS="western">About Stamina</H3>
+<UL>
+	<LI><P>without stamina the damage of the moves degrade and the pawn
+	is vulnerable</P>
+	<LI><P>Moves/blocks consume stamina</P>
+	<LI><P>stamina regenerates over time</P>
+	<LI><P>Counter-attacks restore stamina immediatly</P>
+</UL>
+<H2 CLASS="western">Basic-Moves</H2>
+<P>Note that in fight-mode the character is always facing in one
+direction.</P>
+<P>In Fight-mode the following moves are possible:</P>
+<UL>
+	<LI><P>Punch (X): 
+	</P>
+</UL>
+<UL>
+	<UL>
+		<LI><P>forward attack with fist against upper body</P>
+	</UL>
+</UL>
+<UL>
+	<LI><P>Upper-Cut (Up+X):</P>
+</UL>
+<UL>
+	<UL>
+		<LI><P>forward attack with fist against upper body</P>
+	</UL>
+</UL>
+<UL>
+	<LI><P>High-Kick (Right +X):</P>
+</UL>
+<UL>
+	<UL>
+		<LI><P>forward attack with leg against upper body</P>
+	</UL>
+	<LI><P>Low-Kick (Right +X):</P>
+	<UL>
+		<LI><P>forward attack with leg against lower body</P>
+	</UL>
+	<LI><P>Jump-Kick (Up +A):</P>
+	<UL>
+		<LI><P>forward attack with leg against lower body.throws the
+		attacked into air 
+		</P>
+	</UL>
+	<LI><P>Leg-Sweeper(Down +A):</P>
+	<UL>
+		<LI><P>forward attack with leg against lower body; throws the
+		attacked to ground</P>
+	</UL>
+</UL>
+<UL>
+	<LI><P>Block (B blocks low attacks / Y blocks high attacks)</P>
+</UL>
+<UL>
+	<UL>
+		<LI><P>Blocks attacks in one damage zone in forward direction.</P>
+		<LI><P>If the block is initiated shortly before the attack, it is a
+		TimedBlock.</P>
+	</UL>
+</UL>
+<UL>
+	<LI><P>Counter (X / A)</P>
+</UL>
+<UL>
+	<UL>
+		<LI><P>A TimedBlock can lead to a counter by pressing the
+		corresponding attack-button.</P>
+	</UL>
+	<LI><P>Throw ():</P>
+	<UL>
+		<LI><P>Counter-Attack;</P>
+	</UL>
+	<LI><P>Grab ():</P>
+	<UL>
+		<LI><P>Counter-Attack;</P>
+	</UL>
+	<LI><P>Dash (Right, Right +B):</P>
+	<UL>
+		<LI><P>forward dash attack against lower body</P>
+	</UL>
+	<LI><P>Turn around( Left, Left):</P>
+	<UL>
+		<LI><P>changes the forward facing direction</P>
+	</UL>
+</UL>
+<H2 CLASS="western">Combo-System</H2>
+<UL>
+	<LI><P>basic moves can be chained together to create combos</P>
+	<LI><P>the chain can be interupted by blocks</P>
+	<LI><P></P>
+</UL>
+<H2 CLASS="western">Implementation</H2>
+<UL>
+	<LI><P>Combodetection implemented as statemachine?</P>
+</UL>
+</BODY>
+</HTML>
